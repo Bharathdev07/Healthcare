@@ -32,7 +32,7 @@ jobs:
       with:
         base64-kube-config: ${{ secrets.KUBE_CONFIG_PROD }}
     - run: |
-        kubectl apply -f deploy.yaml
-        kubectl apply -f svc.yaml
+        kubectl apply -d deploy.yaml
+        kubectl apply -d svc.yaml
         
       
