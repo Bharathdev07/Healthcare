@@ -23,4 +23,5 @@ jobs:
     - name: Build with Maven
       run: | 
         PATH="/opt/apache-maven-3.8.7/bin:$PATH"
+        cd /home/ubuntu/actions-runner/test/Healthcare/Healthcare
         mvn clean install
