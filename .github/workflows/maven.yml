@@ -27,3 +27,9 @@ jobs:
       run: | 
         PATH="/opt/apache-maven-3.8.7/bin:$PATH"
         mvn clean install
+    - name: ecr login
+      run: |
+        aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 619071328164.dkr.ecr.ap-south-1.amazonaws.com
+        docker build -t 619071328164.dkr.ecr.ap-south-1.amazonaws.com/java:latest .
+        docker push 619071328164.dkr.ecr.ap-south-1.amazonaws.com/java:latest
+        
