@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: java
-        image: bharath0812/health:1.0
+        image: bharath415/health:1.0
         ports:
         - containerPort: 8082
