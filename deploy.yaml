@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: java
-        image: public.ecr.aws/m7w0r2s7/health:latest
+        image: bharath0812/health:1.0
         ports:
         - containerPort: 8082
